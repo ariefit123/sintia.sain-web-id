@@ -33,7 +33,7 @@
 								<div class="logo text-center"><img src="images/logo.png" width="70" alt="Klorofil Logo"></div>
 								<p class="lead">Daftar Akun Aiska Store</p>
 							</div>
-							<form class="form-auth-small" action="#" name="form">
+							<form class="form-auth-small" action="cek_daftar.php" name="form">
                                 <div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Nama</label>
 									<input type="text" name="nama" class="form-control" id="signin-email" placeholder="Nama">
@@ -72,38 +72,3 @@
 
 </html>
 
-<?php 
-            $query = "SELECT max(kd_user) AS last FROM `user`";
-			$hasil1 = $koneksi->query($query);
-			$data  = $hasil1->fetch_array();
-			$lastNoTransaksi = $data['last'];
-			$lastNoUrut = substr($lastNoTransaksi, 3, 3);
-			$nextNoUrut = $lastNoUrut + 1;
-			$kd_user = "USR".sprintf('%03s', $nextNoUrut);
-
-        $nama         =   $_POST['nama'];
-        $email        =   $_POST['email'];
-        $alamat            =   $_POST['alamat'];
-        $password          =   $_POST['password'];
-
-        $simpan  =  $_POST['daftar'];
-
-        if($simpan){ 
-          $query = $koneksi->query ("insert into user (kd_user, nama_user, email_user, alamat_user, password) values ('$kd_user','$nama','$email','$alamat','$password')");
-          if($query){
-          ?>
-             <script type="text/javascript">
-              window.alert("Telah di tambahkan data pembeli");
-              window.location = "?page=login";
-             </script>
-          <?php
-          }else{
-            ?>
-            <script type="text/javascript">
-              window.alert("Gagal");
-              window.history.go(-1);
-             </script>
-            <?php
-          }
-        }
-        ?>
