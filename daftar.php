@@ -33,7 +33,7 @@
 								<div class="logo text-center"><img src="images/logo.png" width="70" alt="Klorofil Logo"></div>
 								<p class="lead">Daftar Akun Aiska Store</p>
 							</div>
-							<form class="form-auth-small" action="cek_daftar.php" name="form">
+							<form class="form-auth-small" method="post" action="cek_daftar.php">
                                 <div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Nama</label>
 									<input type="text" name="nama" class="form-control" id="signin-email" placeholder="Nama">
@@ -50,7 +50,7 @@
 									<label for="signin-password" class="control-label sr-only">Buat Password</label>
 									<input type="password" name="password" class="form-control" id="signin-password" placeholder="Password">
 								</div>
-								<button type="submit" name="daftar" value="daftar" class="btn btn-primary btn-lg btn-block">DAFTAR SEKARANG</button>
+								<button type="submit" class="btn btn-primary btn-lg btn-block">DAFTAR SEKARANG</button>
 								<a href="login.php" class="btn btn-success btn-lg btn-block">LOGIN</a>
 							</form>
 						</div>
