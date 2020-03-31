@@ -18,7 +18,7 @@ include "config/koneksi.php";
           if($query){
           ?>
              <script type="text/javascript">
-              window.alert("Telah di tambahkan data pembeli");
+              window.alert("Telah di tambahkan data user");
               window.location = "login.php";
              </script>
           <?php
