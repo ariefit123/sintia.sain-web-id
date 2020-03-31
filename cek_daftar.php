@@ -14,8 +14,6 @@ include "config/koneksi.php";
         $alamat            =   $_POST['alamat'];
         $password          =   $_POST['password'];
 
-
-        if($simpan){ 
           $query = $koneksi->query ("insert into user (kd_user, nama_user, email_user, alamat_user, password) values ('$kd_user','$nama','$email','$alamat','$password')");
           if($query){
           ?>
